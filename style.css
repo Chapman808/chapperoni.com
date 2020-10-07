@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+#container{
+    background-color: rgb(255, 243, 204);
+    width: 100%;
+    margin: auto;
+    height: 1150px;
+    border: black solid;
+}
+header{
+    background-color: #001233;
+    color: #fffac8;
+    border: 4px rgb(63, 63, 63) solid;
+}
+aside{
+    width: 14%;
+    float: left;
+    border: 4px rgb(63, 63, 63) solid;
+    height: 1000px;
+
+}
+
+article{
+    width: 85%;
+    float: right;
+    height: 1000px;
+    border: 4px rgb(63, 63, 63) solid;
+}
+footer{
+    background-color: #EEEEEE;
+    color: black;
+    border: 4px black solid;
+    clear:both
+}
+.tile{
+    background-color: #EEEEEE;
+    color: darkorange;
+    width: 100%;
+}
+
