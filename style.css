@@ -26,13 +26,14 @@ body{
 header{
     
     background-color: #002d7caf;
+    border-radius: 4px;
     color: white;
     padding: 50px;
 }
 aside{
 
     width: 350px;
-    height: 800px;
+    height: 600px;
     float: left;
     background-color: rgba(116, 116, 116, 0.548);
     border-radius: 10px;
@@ -41,7 +42,8 @@ aside{
 }
 .links-header {
     /*background-color: rgba(116, 116, 116, 0.849);*/
-    background-image: url("https://cdn.pixabay.com/photo/2017/03/25/18/06/color-2174066_960_720.png");
+    background-image: url("poly.png");
+    color: rgb(53, 52, 63);
     margin: 0px;
     padding: 20px;
     border-radius: 10px;
@@ -50,8 +52,8 @@ aside{
 }
 article{
     background-color: rgba(116, 116, 116, 0.548);
-    height: 800px;
-    overflow: hidden;
+    height: 600px;
+    overflow: auto;
 }
 footer{
     background-color: #EEEEEE;
@@ -60,13 +62,13 @@ footer{
     clear:both
 }
 .tile{
-    margin: 10px;
-    padding: 10px;
-    height: 200px;
-    background-image: url("https://cdn.pixabay.com/photo/2017/03/25/18/06/color-2174066_960_720.png");
+    margin: 20px;
+    padding: 20px;
+    height: 400px;
+    background-image: url("poly.png");
     background-size: 100%;
     /*background-color: rgba(116, 116, 116, 0.849);*/
     border-radius: 10px;
-    color: white;
+    color: rgb(53, 52, 63);
 }
 
