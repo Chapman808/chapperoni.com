@@ -3,6 +3,7 @@
     
 <head>
         <link href="style.css" rel="stylesheet"/>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"> </script>
 </head>
         
 <body>
@@ -18,7 +19,10 @@
 
         <article>
             <div class="tile">
-                <h1>Panel 1</h1>
+                <h1>Blender</h1>
+                <div class="tile-window">
+                    <model-viewer src="tank-man.glb" alt="tank model"></model-viewer>
+                </div>
             </div>     
             <div class="tile">
                 <h1>Panel 2</h1>
