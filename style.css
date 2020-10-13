@@ -1,41 +1,40 @@
 *{
-    margin: 12px;
+    margin: 5px;
     padding: 5px;
 }
 
 html{
-
     margin: 0;
+    padding: 0;
     background-image: url("https://cdn.pixabay.com/photo/2016/11/05/12/38/fuzzy-1800136_960_720.jpg");
     background-size: 100%;
-
+    height: 100%;
+    width: 100%;
 }
 body{
-
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 0;
     height: 100%;
+    width: 100%;
     padding: 0;
 }
 
 #container{
-    margin-left: 0;
-    margin-right: 0;
+
     overflow: auto;
+    display:flex;
     /*border: black solid;*/
 }
 header{
-    
+    margin: 15px;
     background-color: #002d7caf;
     border-radius: 4px;
     color: white;
-    padding: 50px;
+    padding: 40px;
 }
 aside{
-
-    width: 350px;
-    height: 600px;
+    width: 18%;
     float: left;
+    padding: 0;
     background-color: rgba(116, 116, 116, 0.548);
     border-radius: 10px;
     color: white
@@ -52,9 +51,13 @@ aside{
     border-bottom-left-radius: 0;
 }
 article{
+    position: relative;
     background-color: rgba(116, 116, 116, 0.548);
-    height: 600px;
-    overflow: auto;
+    padding: 20px;
+    height: 620px;
+    width: 82%;
+    overflow: hidden;
+
 }
 footer{
     background-color: #EEEEEE;
@@ -63,18 +66,61 @@ footer{
     clear:both
 }
 .tile{
-    margin: 10px;
-    padding: 1px;
-    height: 600px;
+    position: absolute;
+    margin: 20px;
+    width: 47%;
+    height: 42%;
     background-image: url("poly.png");
     background-size: 100%;
     /*background-color: rgba(116, 116, 116, 0.849);*/
     border-radius: 10px;
     color: rgb(53, 52, 63);
+    transition: 0.3s;
+ 
 }
+
+#top-left{
+    top: 0;
+    left: 0;
+}
+
+#top-right{
+    top: 0;
+    right: 0;
+}
+
+#bottom-left{
+    bottom: 0;
+    left: 0;
+}
+
+#bottom-right{
+    bottom: 0;
+    right: 0;
+}
+
+
+
 .tile-window{
-    height: 500px;
+    position: absolute;
+    top: 35px;
+    bottom: 10px;
+    left: 5px;
+    right: 5px;
     background-color: rgba(255, 255, 255, 0.726);
     border-radius: 10px;
+    overflow: auto;
+
+
+}
+
+
+
+.tile:hover{
+    width: 90%;
+    height: 85%;
+    transition: 1s;
+    cursor: pointer;
+    z-index: 1;
 }
 
