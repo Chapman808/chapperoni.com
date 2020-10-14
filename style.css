@@ -1,12 +1,22 @@
+:root{
+    --page-background : url("https://cdn2.slidemodel.com/wp-content/uploads/7243-01-low-poly-background-16x9-1.jpg");
+    --header-background:  rgb(255, 149, 50);
+    --header-border: 4px rgb(95, 46, 0) solid;
+    --main-border: 4px rgba(0, 63, 92, 0.795) solid;
+    --main-background: rgb(235, 250, 255);
+}
+
 *{
     margin: 5px;
     padding: 5px;
+    font-family: monospace;
+
 }
 
 html{
     margin: 0;
     padding: 0;
-    background-image: url("https://cdn.pixabay.com/photo/2016/11/05/12/38/fuzzy-1800136_960_720.jpg");
+    background-image: var(--page-background);
     background-size: 100%;
     height: 100%;
     width: 100%;
@@ -18,48 +28,66 @@ body{
     padding: 0;
 }
 
-#container{
 
+
+#container{
+    margin-left: 0;
+    padding: 0;
     overflow: auto;
     display:flex;
     /*border: black solid;*/
 }
 header{
-    margin: 15px;
-    background-color: #002d7caf;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    margin: 0px;
+    margin-bottom: 50px;
+    background-color:  var(--header-background);
+    border-bottom: var(--header-border);
     border-radius: 4px;
-    color: white;
-    padding: 40px;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+
 }
 aside{
-    width: 18%;
-    float: left;
+    margin-left: 0;
     padding: 0;
-    background-color: rgba(116, 116, 116, 0.548);
-    border-radius: 10px;
+    width: 16%;
+    float: left;
+    background-color: var(--main-background);
+    border-top: var(--main-border);
+    border-right: var(--main-border);
+    border-bottom: var(--main-border);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     color: white
 
 }
 .links-header {
     /*background-color: rgba(116, 116, 116, 0.849);*/
-    background-image: url("poly.png");
-    color: rgb(53, 52, 63);
-    margin: 0px;
-    padding: 20px;
-    border-radius: 10px;
+    background:  rgba(24, 127, 172, 0.548); 
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 8px;
+    border-radius: 5px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
 }
 article{
     position: relative;
-    background-color: rgba(116, 116, 116, 0.548);
+    background-color:  var(--main-background);
+    border: 4px rgba(0, 63, 92, 0.795) solid;
+    border-radius: 10px;
     padding: 20px;
+    margin-left: 110px;
     height: 620px;
-    width: 82%;
+    width: 75%;
     overflow: hidden;
 
 }
 footer{
+    margin-top: 30px;
     background-color: #EEEEEE;
     color: black;
     border: 4px black solid;
@@ -70,7 +98,7 @@ footer{
     margin: 20px;
     width: 47%;
     height: 42%;
-    background: rgba(255, 213, 159, 0.726);
+    background: rgba(24, 127, 172, 0.548);
     background-size: 100%;
     /*background-color: rgba(116, 116, 116, 0.849);*/
     border-radius: 10px;
@@ -117,7 +145,8 @@ footer{
 
 
 .tile:hover{
-    background: rgb(252, 195, 91);
+    background: rgb(24, 128, 172);
+    border: var(--main-border);
     width: 90%;
     height: 85%;
     transition: .5s;
