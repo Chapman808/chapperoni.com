@@ -1,18 +1,30 @@
 :root{
-    --page-background : url("https://cdn2.slidemodel.com/wp-content/uploads/7243-01-low-poly-background-16x9-1.jpg");
-    --header-background:  rgb(255, 149, 50);
-    --header-border: 4px rgb(95, 46, 0) solid;
-    --main-border: 4px rgba(0, 63, 92, 0.795) solid;
-    --main-background: rgb(235, 250, 255);
+    --page-background : url("https://cdn5.vectorstock.com/i/1000x1000/51/79/light-blue-triangle-background-design-geometric-vector-16075179.jpg"); 
+    --header-background:  rgb(119, 122, 122);
+    --header-border: 0px rgb(95, 46, 0) solid;
+    --main-border: 0px rgba(0, 63, 92, 0.795) solid;
+    --main-background: rgb(247, 247, 237);
+	--page-headings-background: rgb(190, 209, 209);
 }
 
 *{
     margin: 5px;
     padding: 5px;
-    font-family: monospace;
+    font-family: "Arial";
 
 }
 
+h1{
+	font-size: 15pt;
+}
+
+h2 {
+	font-size: 10pt;
+}
+
+h3 {
+	font-size: 10pt;
+}
 html{
     margin: 0;
     padding: 0;
@@ -27,7 +39,6 @@ body{
     width: 100%;
     padding: 0;
 }
-
 
 
 #container{
@@ -45,7 +56,7 @@ header{
     background-color:  var(--header-background);
     border-bottom: var(--header-border);
     border-radius: 4px;
-    color: rgb(0, 0, 0);
+    color: var(--main-background);
     padding: 5px;
 
 }
@@ -65,7 +76,7 @@ aside{
 }
 .links-header {
     /*background-color: rgba(116, 116, 116, 0.849);*/
-    background:  rgba(24, 127, 172, 0.548); 
+    background:  var(--page-headings-background); 
     color: rgb(0, 0, 0);
     margin: 0;
     padding: 8px;
@@ -77,7 +88,7 @@ aside{
 article{
     position: relative;
     background-color:  var(--main-background);
-    border: 4px rgba(0, 63, 92, 0.795) solid;
+    border: var(--main-border);
     border-radius: 10px;
     padding: 20px;
     margin-left: 110px;
@@ -90,7 +101,7 @@ footer{
     margin-top: 30px;
     background-color: #EEEEEE;
     color: black;
-    border: 4px black solid;
+    border: 2px black solid;
     clear:both
 }
 .tile{
@@ -98,7 +109,7 @@ footer{
     margin: 20px;
     width: 47%;
     height: 42%;
-    background: rgba(24, 127, 172, 0.548);
+    background: var(--page-headings-background); 
     background-size: 100%;
     /*background-color: rgba(116, 116, 116, 0.849);*/
     border-radius: 10px;
@@ -135,17 +146,15 @@ footer{
     bottom: 10px;
     left: 5px;
     right: 5px;
-    background-color: rgba(255, 255, 255, 0.726);
+    background-color: rgb(255,255,255);
     border-radius: 10px;
     overflow: auto;
 
 
 }
 
-
-
 .tile:hover{
-    background: rgb(24, 128, 172);
+    background: rgb(71, 255, 204);
     border: var(--main-border);
     width: 90%;
     height: 85%;
