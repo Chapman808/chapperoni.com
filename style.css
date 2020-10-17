@@ -1,5 +1,5 @@
 :root{
-    --page-background : url("https://cdn5.vectorstock.com/i/1000x1000/51/79/light-blue-triangle-background-design-geometric-vector-16075179.jpg"); 
+    --page-background : "blue-poly.png"; 
     --header-background:  rgb(119, 122, 122);
     --header-border: 0px rgb(95, 46, 0) solid;
     --main-border: 0px rgba(0, 63, 92, 0.795) solid;
