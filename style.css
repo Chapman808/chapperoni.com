@@ -3,7 +3,7 @@
     --header-background:  rgb(119, 122, 122);
     --header-border: 0px rgb(95, 46, 0) solid;
     --main-border: 0px rgba(0, 63, 92, 0.795) solid;
-    --main-background: rgb(247, 247, 237);
+    --main-background: rgba(255, 255, 255, 0.123);
 	--page-headings-background: rgb(190, 209, 209);
 }
 
@@ -28,7 +28,7 @@ h3 {
 html{
     margin: 0;
     padding: 0;
-    background-image: var(--page-background);
+    background-image: url(https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80);/*var(--page-background);*/
     background-size: 100%;
     height: 100%;
     width: 100%;
@@ -87,72 +87,37 @@ aside{
 }
 article{
     position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
     background-color:  var(--main-background);
     border: var(--main-border);
     border-radius: 10px;
-    padding: 20px;
+    padding: 0px;
     margin-left: 110px;
     height: 620px;
     width: 75%;
-    overflow: hidden;
+    overflow: auto;
 
 }
-footer{
-    margin-top: 30px;
-    background-color: #EEEEEE;
-    color: black;
-    border: 2px black solid;
-    clear:both
-}
+
 .tile{
-    position: absolute;
-    margin: 20px;
-    width: 47%;
-    height: 42%;
+    margin: 15px;
     background: var(--page-headings-background); 
-    background-size: 100%;
-    /*background-color: rgba(116, 116, 116, 0.849);*/
     border-radius: 10px;
     color: rgb(0, 0, 0);
-    transition: 0.3s;
- 
-}
-
-#top-left{
-    top: 0;
-    left: 0;
-}
-
-#top-right{
-    top: 0;
-    right: 0;
-}
-
-#bottom-left{
-    bottom: 0;
-    left: 0;
-}
-
-#bottom-right{
-    bottom: 0;
-    right: 0;
+    overflow: hidden;
 }
 
 
 
 .tile-window{
-    position: absolute;
-    top: 35px;
-    bottom: 10px;
-    left: 5px;
-    right: 5px;
     background-color: rgb(255,255,255);
     border-radius: 10px;
+    height: 80%;
     overflow: auto;
-
-
 }
-
+/*
 .tile:hover{
     background: rgb(71, 255, 204);
     border: var(--main-border);
@@ -163,3 +128,12 @@ footer{
     z-index: 1;
 }
 
+*/
+
+footer{
+    margin-top: 30px;
+    background-color: #EEEEEE;
+    color: black;
+    border: 2px black solid;
+    clear:both
+}
