@@ -7,9 +7,9 @@ class Cell {
     constructor(xIndex, yIndex, grid) {
 
         //images
-        const buttonDefaultImage = "url('images/button.png')";
-        const flagImage = "url('images/flag.png')";
-        this.mineImage = "url('images/mine.png')";
+        const buttonDefaultImage = "url('minesweeper/images/button.png')";
+        const flagImage = "url('minesweeper/images/flag.png')";
+        this.mineImage = "url('minesweeper/images/mine.png')";
 
 
         this.position = { 'x': xIndex, 'y': yIndex };
