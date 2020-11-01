@@ -70,6 +70,10 @@ window.onload = function () {
     //restart game on submit button
     SUBMIT_OPTIONS.addEventListener('click', function () {
         initializeGrid();
+        CUSTOM_MINE_NUM.value = settings.minesNum;
+        CUSTOM_X_SIZE.value = settings.gridSize.x;
+        CUSTOM_Y_SIZE.value = settings.gridSize.y;
+
     
     }, false);
 
