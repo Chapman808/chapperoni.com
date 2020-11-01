@@ -35,7 +35,7 @@ window.onload = function () {
             minesNum = 40;
         }
         else if (PRESET_HARD.checked){
-            gridSize = {"x" : 16, "y" : 30};
+            gridSize = {"x" : 30, "y" : 16};
             minesNum = 99;
         }
         else if (PRESET_CUSTOM.checked){
