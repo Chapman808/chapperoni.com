@@ -8,6 +8,7 @@ html{
 .container {
     height: 100%;
     background-image: url("https://images.freecreatives.com/wp-content/uploads/2016/02/Subtle-Clouds-Texture-Pattern.jpg");
+    /*background-color: rgb(240, 240, 240);*/
 }
 
 header {
@@ -18,13 +19,17 @@ header {
 }
 
 #minesweeper-header {
+    font-weight: bold;
+    margin-bottom: 15px;
     padding: 5px;
     background-color: lightgray;
-    border: 2px gray solid;
+    border: 5px gray inset;
+   
 }
 
 #game-frame {
-    background-color: rgb(61, 61, 61);
+    background-color: rgb(93, 102, 107);
+    border: 8px rgb(134, 145, 151)outset;
     padding: 10px;
     position: absolute;
     left: 10%;
@@ -32,21 +37,24 @@ header {
 }
 
 #game-grid-container {
+    position: relative;
     background-color: lightgray;
     display: grid;
     grid-template-columns: repeat (10, 40px);
 }
 
 .game-grid-cell {
+    line-height: 38px;
     font-display: center;
-    border: 1px gray solid;
+    font-weight: bold;
+    /*border: 1px gray solid;*/
     height: 40px;
-    font-size: 20pt;
+    font-size: 25pt;
     text-align: center;
 }
 
 .game-grid-button {
-    background-image: url('images/button.png');
+    background-image: url('images/button-grass.png');
     box-shadow: none;
     width: 40px;
     height: 40px;

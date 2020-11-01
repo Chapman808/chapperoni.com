@@ -14,8 +14,16 @@
                 <div id="options">
                     #Mines: <input type="number" style="width: 50px;" value="10" maxlength="2" id="mine-amount-input">
                     Size-X: <input type="number" style="width: 50px;" value="10" maxlength="2" id="grid-size-x-input">
-                    Size-Y: <input type="number" style="width: 50px;" value="10" maxlength="2" id="grid-size-y-input">
+                    Size-Y: <input type="number" style="width: 50px;" value="10" maxlength="2" id="grid-size-y-input"><br/>
                     <input type="submit" style="margin: 5px;" id="submit-options"></input>
+                    <input type="radio" id="preset-easy" name="preset-game-modes" checked="checked">
+                    <label for="preset-easy">Easy</label>
+                    <input type="radio" id="preset-medium" name="preset-game-modes">
+                    <label for="preset-medium">Medium</label>
+                    <input type="radio" id="preset-hard" name="preset-game-modes">
+                    <label for="preset-hard">Hard</label>
+                    <input type="radio" id="preset-custom" name="preset-game-modes">
+                    <label for="preset-custom">Custom</label>
                 </div>
                 <p id="message"></p>
             </div>

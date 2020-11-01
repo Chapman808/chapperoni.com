@@ -7,10 +7,10 @@ class Cell {
     constructor(xIndex, yIndex, grid) {
 
         //images
-        const buttonDefaultImage = "url('minesweeper/images/button.png')";
-        const flagImage = "url('minesweeper/images/flag.png')";
-        this.mineImage = "url('minesweeper/images/mine.png')";
-
+        const buttonDefaultImage = "url('minesweeper/images/button-grass.png')";
+        const flagImage = "url('minesweeper/images/flag-grass.png')";
+        this.mineImage = "url('minesweeper/images/mine-dirt.png')";
+        this.dirtImage = "url('minesweeper/images/dirt.png')";
 
         this.position = { 'x': xIndex, 'y': yIndex };
         this.isOpened = false;
@@ -59,6 +59,15 @@ class Cell {
     ///////////////////////////////////////////////
     //manages clicks on cell. Calls checkForMine and returns result. ends game if mine is found at clicked position. 
     onCellClick (){
+        //initialize mines on first click (mine cannot spawn on first click position or in the 8 neighbors)
+        if (!this.grid.gameStarted){
+            let dontSpawnPositions = [this.position];
+            this.getNeighborCells().forEach(neighbor => {
+                dontSpawnPositions.push(neighbor.position);
+            })
+            this.grid.initializeMinePositions(dontSpawnPositions);
+            this.grid.gameStarted = true;
+        }
         this.isOpened = true;
         if (this.checkForMine()) {
             this.cellDiv.style.backgroundImage = this.mineImage;
@@ -68,6 +77,8 @@ class Cell {
 
         //updates cell text with its weight (number of neighbor mines)
         this.cellDiv.innerHTML = this.getCellWeight();
+        this.cellDiv.style.color = getWeightColor(this.getCellWeight());
+        this.cellDiv.style.backgroundImage  = this.dirtImage;
 
         //if this cell has a weight of zero, 'open' all neighbor cells. Propogate this behavior recursively to all adjacent neighbors that are not open.
         this.propogateZeroWeight();
@@ -125,6 +136,7 @@ class Cell {
         //if the cell has weight of zero, 'open' all adjacent neighbors.
         if (this.getCellWeight() === 0) {
             this.cellDiv.innerHTML = "";
+            this.openCell();
             this.isOpened = true;
 
             //for each neighbor cell, open it if it isn't already open. If it hasn't, propogate to neighbors.
@@ -132,13 +144,19 @@ class Cell {
             setTimeout(() => this.getNeighborCells().forEach(neighbor => {
                 if (!neighbor.isOpened && !neighbor.isFlagged) {
                     neighbor.cellDiv.innerHTML = neighbor.getCellWeight(); //opens cell and sets inner HTML to weight
-                    neighbor.isOpened = true;
+                    neighbor.cellDiv.style.color = getWeightColor(neighbor.getCellWeight());
+                    neighbor.openCell();
                     neighbor.propogateZeroWeight();
                 }
             }), 10);
             this.grid.checkWin();
             return;
         }
+    }
+
+    openCell(){
+        this.cellDiv.style.backgroundImage  = this.dirtImage;
+        this.isOpened = true;
     }
     
     

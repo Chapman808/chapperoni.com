@@ -113,6 +113,7 @@ article{
 }
 
 .tile{
+    display: block;
     margin: 15px;
     background: var(--page-headings-background); 
     border-radius: 10px;
@@ -120,15 +121,30 @@ article{
     overflow: hidden;
 }
 
-
+.app-thumbnail {
+    border-radius: 10px;
+    width: 200px;
+}
 
 .tile-window{
+    position: relative;
     background-color: rgb(255,255,255);
     border-radius: 10px;
     height: 80%;
     overflow: auto;
 }
 
+#minesweeper-tile-window{
+    background-image: url("images/minesweeper-thumbnail.png");
+    background-size: contain;
+}
+
+.tile-window-text {
+    border-radius: 10px;
+    position: absolute;
+    top : 10%;
+    background-color: rgba(255, 255, 255, 0.719);
+}
 .tile-window-not-implemented{
     background-image: url("images/mountains-light.png");
     border-radius: 10px;
