@@ -1,1 +1,0 @@
-const math = () => { return 4 + 5 }; math();
