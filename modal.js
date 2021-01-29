@@ -1,1 +1,0 @@
-//this script was built with the help of a tutorial by Web Dev Simplified, via : https://www.youtube.com/watch?v=MBaw_6cPmAw&ab_channel=WebDevSimplified
